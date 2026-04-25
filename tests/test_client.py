@@ -1,10 +1,12 @@
 from marshal import load
 import json
 import os
-import pytest
-from dotenv import load_dotenv
-from rule34.client import Client
-from rule34.posts import Post
+#import pytest
+#from dotenv import load_dotenv
+#from rule34.client import Client
+#from rule34.posts import Post
+
+raise NotImplementedError
 
 class DummyResponse:
     def __init__(self, status_code=200, content=b"", headers=None):

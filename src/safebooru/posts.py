@@ -4,9 +4,9 @@ from dataclasses import dataclass, field
 from pydantic import BaseModel, Field, model_validator
 
 class Rating(Enum):
-    EXPLICIT = 0
+    EXPLICIT = 2
     QUESTIONABLE = 1
-    SAFE = 2
+    SAFE = 0
 
     @classmethod
     def from_string(cls, value: str):
@@ -65,7 +65,8 @@ class TagInfo:
                 case "metadata": result.meta.add(entry["tag"])
                 case "artist":   result.artists.add(entry["tag"])
                 case "character":result.characters.add(entry["tag"])
-                case "copyrights":result.copyrights.add(entry["tag"])
+                case "copyright":result.copyrights.add(entry["tag"])
+                case _ :         result.general.add(entry["tag"])
             result.count[entry["tag"]] = int(entry["count"])
         return result
     
@@ -81,7 +82,7 @@ class TagInfo:
 
 class Post(BaseModel):
     """
-    Represents a post on rule34.xxx.
+    Represents a post on gelbooru.org.
 
     # Properties
     ---
@@ -135,7 +136,7 @@ class Post(BaseModel):
     """
 
     height: int
-    score: int
+    score: int | None
     file_url: str
     parent_id: int
     sample_url: str
@@ -190,7 +191,7 @@ class Post(BaseModel):
         )
 
     @classmethod
-    def from_multiple_json(cls, posts_json: str) -> list["Post"]:
+    def _from_multiple_json(cls, posts_json: str) -> list["Post"]:
         d = json.loads(posts_json)
         if not isinstance(d, list):
             d = [d]
