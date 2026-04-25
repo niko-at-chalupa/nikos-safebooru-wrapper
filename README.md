@@ -10,7 +10,7 @@ A python wrapper for rule34.xxx!!
 
 ## Features
 > - **`tag_info` support** -
-> Supports rule34's tag info stuff. This means that tags can be catagorized by their type *(general, artist, character...)*.
+> Supports safebooru's tag info stuff. This means that tags can be catagorized by their type *(general, artist, character...)*.
 
 ## Planned features
 > - [ ] Httpx instead of requests
