@@ -1,0 +1,18 @@
+.env
+venv
+**testing
+**.pyc
+**__pycache__
+.DS_Store
+ty.toml
+.vscode
+**.egg-info
+**dist
+
+# to be safe and NOT push downloaded content to github
+**.png
+**.jpg
+**.jpeg
+**.gif
+**.mp4
+**.webm
