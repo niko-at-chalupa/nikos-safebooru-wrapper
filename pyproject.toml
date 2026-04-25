@@ -20,6 +20,3 @@ readme = "README.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[project.scripts]
-rule34 = "rule34.__main__:main"
