@@ -4,7 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nikos-safebooru-wrapper"
-version = "1.0.4"
+version = "0.1.0"
+
 description = "A Python wrapper for the safebooru.org API"
 authors = [
     {name = "Niko"}
