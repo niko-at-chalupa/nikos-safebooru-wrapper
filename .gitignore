@@ -8,6 +8,7 @@ ty.toml
 .vscode
 **.egg-info
 **dist
+.venv
 
 # to be safe and NOT push downloaded content to github
 **.png
