@@ -11,13 +11,8 @@ authors = [
 ]
 dependencies = [
     "requests",
-    "httpx",
-    "python-dotenv",
     "pydantic",
     "python-magic",
-    "beautifulsoup4",
-    "lxml",
-    "platformdirs",
 ]
 license = {text = "Unlicense"}
 readme = "README.md"

@@ -1,12 +1,9 @@
 from pydantic.dataclasses import dataclass
-import shlex
 import requests
 from .posts import Post
 from pathlib import Path
 import magic
 import time
-from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
 
 class Formatter(logging.Formatter):

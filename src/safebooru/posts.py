@@ -1,7 +1,7 @@
 import json
 from enum import Enum
 from dataclasses import dataclass, field
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel
 
 class Rating(Enum):
     EXPLICIT = 2
