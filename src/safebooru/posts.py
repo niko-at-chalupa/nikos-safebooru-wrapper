@@ -10,11 +10,12 @@ class Rating(Enum):
 
     @classmethod
     def from_string(cls, value: str):
-        if value == "e" or value == "explicit":
+        normalized = value.lower()
+        if normalized in {"e", "explicit"}:
             return cls.EXPLICIT
-        elif value == "q" or value == "questionable":
+        elif normalized in {"q", "questionable"}:
             return cls.QUESTIONABLE
-        elif value == "s" or value == "safe":
+        elif normalized in {"s", "safe", "g", "general"}:
             return cls.SAFE
         else:
             raise ValueError("Value passed into from_string isn't valid!!")
