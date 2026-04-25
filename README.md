@@ -6,7 +6,7 @@
 > [!NOTE]
 > This derives from [Niko's Rule34 Wrapper](https://github.com/niko-at-chalupa/nikos-rule34-wrapper).
 
-A python wrapper for rule34.xxx!!
+A python wrapper for safebooru.org!!
 
 ## Features
 > - **`tag_info` support** -
