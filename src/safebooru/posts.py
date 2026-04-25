@@ -191,7 +191,7 @@ class Post(BaseModel):
         )
 
     @classmethod
-    def _from_multiple_json(cls, posts_json: str) -> list["Post"]:
+    def from_multiple_json(cls, posts_json: str) -> list["Post"]:
         d = json.loads(posts_json)
         if not isinstance(d, list):
             d = [d]
